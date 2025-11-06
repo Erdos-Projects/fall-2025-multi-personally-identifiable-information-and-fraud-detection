@@ -5,7 +5,7 @@ Multi-Personally-Identifiable-Information-and-Fraud-Detection
 
 This project is in fulfillment of the Erdos Institute Data Science Program for Fall 2025.
 
-Please see executive summary for detail description of project.
+Please see executive summary for detailed description of project.
 
 There are ? primary coding files for this project.
 

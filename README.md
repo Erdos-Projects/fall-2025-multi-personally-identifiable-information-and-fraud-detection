@@ -17,8 +17,8 @@ This project is in fulfillment of the [Erdös Institute](https://www.erdosinstitu
 1. [Introduction](#Introduction)
 2. [Dataset](#Dataset)
 3. [Methods, Models, Engineered Features
-](#Methods,%20Models,%20Engineered%20Features)
-4. [Performance Metrics and KPIs](#Performance%20Metrics%20and%20KPIs)
+](#Methods%20and%20Models)
+4. [Key Performance Indicators](#Key%20Performance%20Indicators)
 5. [Results](#Results)
 6. [Challenges and Future Work](#Challenges%20and%20Future%20Work)
 7. [Files](#Files)
@@ -29,7 +29,7 @@ Financial fraud is a growing challenge. This project proposes a two-stage fraud 
 
 ## Dataset
 
-We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https://www.jpmorganchase.com/about/technology/research/ai/synthetic-data), a synthetic dataset for privacy. This subject-centric data contains over 1.49 million transactions (electronic transfers, bill payments, deposits, withdrawals) spanning approximately 50 years. Each entry details the transaction amount in U.S. dollars, involved accounts (sender, beneficiary, or both), and other identifying features.
+We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https://www.jpmorganchase.com/about/technology/research/ai/synthetic-data), a synthetic dataset generated due to privacy concerns. This subject-centric data contains over 1.49 million transactions (electronic transfers, bill payments, deposits, withdrawals) spanning approximately 50 years. Each entry details the transaction amount in U.S. dollars, involved accounts (sender, beneficiary, or both), and other identifying features.
 
 <p align="center">
     <img src="readme_pics/synthetic-payment-data-sample.png" />
@@ -38,7 +38,7 @@ We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https
 
 Unfortunately, we cannot give full access to the Fraud Payment Data due to the Terms of Use agreement with J.P. Morgan Chase & Co.
 
-## Methods, Models, Features Engineered
+## Methods and Models
 
 ### Methods
 
@@ -51,9 +51,8 @@ To analyze the complex network of over 300,000 customer and merchant accounts, w
 	<img src="readme_pics/network_example_w_fraud_ring.png" width=450 />
 </p>
 
-### Features Engineered
 
-### Models and Tools Used
+### Models
 
 Logistic Regression, XGBoost, Linear Discrimination Analysis, PCA
 
@@ -95,19 +94,19 @@ Table 1: Business KPIs
 *Note: Synthetic values approximate business value since the data set is synthetic. A back of envelope calculation assumes an analyst makes $50 (salary+benefits) it costs approximately $10 at 4 minutes per alert.* 
 
 
-
 ## Results
 
 Initial results show strong computational performance and low false positive rate, demonstrating feasibility for real time screening. At the current decision threshold (0.5) fraud detection remains limited, resulting in a high miss rate. Future iterations will adjust model tuning, and thresholding to increase recall, the primary objective of the model, while maintaining manageable volume alert. This stage validates the model architecture and provides a foundation for a high-recall optimization in subsequent experiments.
 
 <div align="center">
 
-Table 2: Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956 
 
 | | Precision | Recall | F1-Score |
 |:-----------:|:-----------:|:-----------:|:-----------:|
 | 0 (Non-Fraud) | 0.98 | 0.97 | 0.98 |
-| 1 (Fraud) | 0.13 | 0.26 | 0.17
+| 1 (Fraud) | 0.13 | 0.26 | 0.17 |
+
+<p class="caption"> *Table 2:* Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956 </p>
 
 
 Table 3: Training accuracy for XGBoost is 0.979 

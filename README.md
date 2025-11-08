@@ -25,7 +25,7 @@ We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https
 
 <p align="center">
     <img src="synthetic-payment-data-sample.png" />
-<font size=2> **Image source: J.P. Morgan Chase & Co.** </font>
+<font size=2> <b> Image source: J.P. Morgan Chase & Co. </b> </font>
 </p>
 
 ## Methods, Models, Features Engineered
@@ -35,6 +35,11 @@ We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https
 We engineer both transaction and graph-derived features to train a lightweight, high-recall fraud screening model.
 
 To analyze the complex network of over 300,000 customer and merchant accounts, we used Python’s NetworkX package to construct a multi-directed graph. A multi-directed graph is a network structure composed of nodes, representing sender or beneficiary accounts, and the edges represent transactions. Edge direction shows fund flow – who is sending versus who is receiving the funds – and multiple edges indicate repeated transfers. Fraud often occurs in clusters of accounts cycling funds among themselves, making the graph view effective for uncovering hidden connections and identifying potential fraud rings (Figure ??).
+
+<p align="center">
+	<img src="network_example.png">
+	<img src="network_example_w_fraud_ring.png"
+</p>
 
 ### Features Engineered
 

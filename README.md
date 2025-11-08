@@ -1,4 +1,4 @@
-# <font size=5> **Fast Fraud Screening:** _Using Lightweight Models to Flag Risk Before Deep Analysis_ </font>
+# <font size=6> **Fast Fraud Screening**</font><br><font size=4> _Using Lightweight Models to Flag Risk Before Deep Analysis_ </font>
 
 Team members: [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
 
@@ -139,3 +139,6 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
     <img src="fraud_and_non-fraud_vs_transaction_types.png" width=500 />
     <img src="Fraud_number_vs_transaction_types.png" width=500 />
 </p>
+
+
+This project is in fulfillment of the [Erdös Institute](https://www.erdosinstitute.org/) Data Science Program for Fall 2025.

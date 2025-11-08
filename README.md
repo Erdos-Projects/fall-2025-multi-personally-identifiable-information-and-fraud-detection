@@ -1,4 +1,4 @@
-# <font size=5> **Fast Fraud Screening** </font> <br> _Using Lightweight Models to Flag Risk Before Deep Analysis_
+# <font size=5> **Fast Fraud Screening** </font> <br> <font size=3> _Using Lightweight Models to Flag Risk Before Deep Analysis_ </font>
 
 Team members: [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
 

@@ -1,6 +1,6 @@
 # <font size=6> **Fast Fraud Screening:** _Using Lightweight Models to Flag Risk Before Deep Analysis_ </font>
 
-This repository is for the Fast Fraud Screening project as part of the fulfillment of the [Erdös Institute](https://www.erdosinstitute.org/) Data Science Bootcamp for Fall 2025.
+This repository is for the Fast Fraud Screening project as part of the fulfillment of [The Erdös Institute](https://www.erdosinstitute.org/) Data Science Bootcamp for Fall 2025.
 
 **Team members:** [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Morluyan Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
 

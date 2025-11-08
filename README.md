@@ -59,11 +59,11 @@ To analyze the complex network of over 300,000 customer and merchant accounts, w
 Logistic Regression, XGBoost, Linear Discrimination Analysis, PCA
 
 
-## Key Performance Indicators
+## Key Performance Indicators (KPIs)
 
-### Model Performance KPI
+### Model Performance KPIs
 
-Our Key Performance Indicators include the percentage of fraud transactions correctly flagged (Recall),  and a measure of how much better the model is at identifying fraud compared to random guessing (Lift). We examined the trade-offs between recall and lift for our XGBoost model across different thresholds. The optimal threshold is 0.5, where the model achieves 70% recall, balancing detection coverage and precision.
+Our KPIs include the percentage of fraud transactions correctly flagged (Recall),  and a measure of how much better the model is at identifying fraud compared to random guessing (Lift). We examined the trade-offs between recall and lift for our XGBoost model across different thresholds. The optimal threshold is 0.5, where the model achieves 70% recall, balancing detection coverage and precision.
 
 ### Business KPIs
 

@@ -1,6 +1,6 @@
 # <font size=6> **Fast Fraud Screening:** _Using Lightweight Models to Flag Risk Before Deep Analysis_ </font>
 
-This repository is for the Fast Fraud Screening project as part of the fulfillment of the [Erdös Institute](https://www.erdosinstitute.org/) Data Science Bootcamp for Fall 2025.
+This repository is for the Fast Fraud Screening project as part of the fulfillment of the [ErdÃ¶s Institute](https://www.erdosinstitute.org/) Data Science Bootcamp for Fall 2025.
 
 **Team members:** [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Morluyan Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
 
@@ -17,8 +17,8 @@ This repository is for the Fast Fraud Screening project as part of the fulfillme
 
 1. [Introduction](#Introduction)
 2. [Dataset](#Dataset)
-3. [Methods and Models](#Methods%20and%20Models)
-4. [Key Performance Indicators](#Key%20Performance%20Indicators)
+3. [Methods and Models](#methods-and-models)
+4. [Key Performance Indicators](#key-performance-indicators)
 5. [Results](#Results)
 6. [Challenges](#Challenges)
 7. [Files](#Files)
@@ -44,7 +44,7 @@ Unfortunately, we cannot give full access to the Fraud Payment Data due to the T
 
 We engineer both transaction and graph-derived features to train a lightweight, high-recall fraud screening model.
 
-To analyze the complex network of over 300,000 customer and merchant accounts, we used Python’s NetworkX package to construct a multi-directed graph. A multi-directed graph is a network structure composed of nodes, representing sender or beneficiary accounts, and the edges represent transactions. Edge direction shows fund flow – who is sending versus who is receiving the funds – and multiple edges indicate repeated transfers. Fraud often occurs in clusters of accounts cycling funds among themselves, making the graph view effective for uncovering hidden connections and identifying potential fraud rings.
+To analyze the complex network of over 300,000 customer and merchant accounts, we used Pythonâ€™s NetworkX package to construct a multi-directed graph. A multi-directed graph is a network structure composed of nodes, representing sender or beneficiary accounts, and the edges represent transactions. Edge direction shows fund flow â€“ who is sending versus who is receiving the funds â€“ and multiple edges indicate repeated transfers. Fraud often occurs in clusters of accounts cycling funds among themselves, making the graph view effective for uncovering hidden connections and identifying potential fraud rings.
 
 <p align="center">
 <b>Figures 1,2:</b> Multi-directed graph network</p>

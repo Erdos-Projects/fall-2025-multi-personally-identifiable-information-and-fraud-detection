@@ -1,6 +1,6 @@
 # <font size=6> **Fast Fraud Screening:** _Using Lightweight Models to Flag Risk Before Deep Analysis_ </font>
 
-Team members: [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
+Team members: [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Morluyan Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
 
 **Disclosure:** Documents, code, etc. displayed in this repository includes or references data provided by J.P. Morgan Chase & Co.
 

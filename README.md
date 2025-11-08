@@ -47,8 +47,8 @@ We engineer both transaction and graph-derived features to train a lightweight, 
 To analyze the complex network of over 300,000 customer and merchant accounts, we used Python’s NetworkX package to construct a multi-directed graph. A multi-directed graph is a network structure composed of nodes, representing sender or beneficiary accounts, and the edges represent transactions. Edge direction shows fund flow – who is sending versus who is receiving the funds – and multiple edges indicate repeated transfers. Fraud often occurs in clusters of accounts cycling funds among themselves, making the graph view effective for uncovering hidden connections and identifying potential fraud rings.
 
 <p align="center">
-	<img src="readme_pics/network_example.png" width=450 />
-	<img src="readme_pics/network_example_w_fraud_ring.png" width=450 />
+	<img src="readme_pics/network_example.png" width=400 />
+	<img src="readme_pics/network_example_w_fraud_ring.png" width=400 />
 </p>
 
 
@@ -63,11 +63,7 @@ Logistic Regression, XGBoost, Linear Discrimination Analysis, PCA
 
 Our Key Performance Indicators include the percentage of fraud transactions correctly flagged (Recall),  and a measure of how much better the model is at identifying fraud compared to random guessing (Lift). We examined the trade-offs between recall and lift for our XGBoost model across different thresholds. The optimal threshold is 0.5, where the model achieves 70% recall, balancing detection coverage and precision.
 
-<p align="center">
-<img src="" width=450 />
-</p>
-
-### Business KPI
+### Business KPIs
 
 We use synthetic data to create realistic fraud risk KPIs, evaluating the model on false positives, analyst workload savings, simulated loss-avoidance scores, total loss avoided (USD), and total review cost. Key takeaways:
 
@@ -78,8 +74,6 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 
 <div align="center">
 
-Table 1: Business KPIs
-
 | Metric | Result | Interpretation |
 |:-----------:|:-----------:|:-----------:|
 | Fraud Detection Recall | 24% | % of fraud successfully flagged |
@@ -88,6 +82,8 @@ Table 1: Business KPIs
 | Synthetic Loss Avoided | $2,357,370 | Proxy dollars saved by catching fraud |
 | Total Review Cost | $20,960 | Cost of analyst reviewing alerts |
 | Missed Fraud Risk | $1,916,768 | Proxy dollars lost from missed fraud |
+
+<font size=2> **Table 1:** Business KPIs </font>
 
 </div>
 
@@ -106,15 +102,15 @@ Initial results show strong computational performance and low false positive rat
 | 0 (Non-Fraud) | 0.98 | 0.97 | 0.98 |
 | 1 (Fraud) | 0.13 | 0.26 | 0.17 |
 
-<p class="caption"> *Table 2:* Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956 </p>
+<font size=2> **Table 2:** Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956 </font>
 
-
-Table 3: Training accuracy for XGBoost is 0.979 
 
 | | Precision | Recall | F1-Score |
 |:-----------:|:-----------:|:-----------:|:-----------:|
 | 0 (Non-Fraud) | 0.99 | 0.98 | 0.98 |
 | 1 (Fraud) | 0.24 | 0.29 | 0.26 |
+
+<font size=2> **Table 3:** Training accuracy for XGBoost is 0.979 </font>
 
 </div>
 
@@ -124,15 +120,14 @@ $$\text{\large Lift} = \dfrac{ \dfrac{\text{TP}}{\text{TP} + \text{FN}}}{\dfrac{
 
 This metric, similar to recall but with Predicted Positive Rate (PPR) in the denominator, measures efficiency. It prioritizes high fraud detection (recall) and a low PPR, aiming to minimize missed fraud and human agent workload by forwarding essential cases.
 
-Any randomized model has Lift = 1, and Figure 4  shows how our models have the flexibility to trade Recall for Lift:
+Any randomized model has Lift = 1, and Figure 1 shows how our models have the flexibility to trade Recall for Lift:
 For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift of the baseline. This significantly boosts fraud detection efficiency and dramatically cuts operational costs.
 
-**Figure 4**
+
 <p align="center">
 <img src="readme_pics/regressions.png" width=450 />
+<font size=2> **Figure 1:** Lift vs. Recall </font>
 </p>
-
-<div align="center">
 
 
 ## Challenges
@@ -141,15 +136,16 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 
 1. **Feature Engineering:** New features must be generated from raw transaction data to uncover fraudulent patterns.
 
-2. **Imbalanced Data:** Fraudulent transactions (2.06% of 1.49 million+) are significantly outnumbered by non-fraudulent ones, making it difficult for a model to learn (Figures ??).
+2. **Imbalanced Data:** Fraudulent transactions (2.06% of 1.49 million+) are significantly outnumbered by non-fraudulent ones, making it difficult for a model to learn (Figures 2, 3).
 
 3. **Synthetic Data Artifact:** Transaction timestamps in this synthetic dataset may follow a pattern, potentially lacking predictive information about fraud, as fraudulent labels were assigned using predefined probabilities.
 
 4. **Normal metrics like accuracy and PR-AUC do not reflect the performance** of our filter well. Instead we use 'Lift,' a standard data science metric that measures efficiency and is defined as follows:
 
 <p align="center">
-<img src="readme_pics/fraud_and_non-fraud_vs_transaction_types.png" width=450 />
-<img src="readme_pics/Fraud_number_vs_transaction_types.png" width=450 />
+<img src="readme_pics/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
+<img src="readme_pics/Fraud_number_vs_transaction_types.png" width=400 />
+<font size=2> **Figures 2,3**: Number of fraudulent transaction types vs. all transactions
 </p>
 
 ## Files

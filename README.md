@@ -2,7 +2,14 @@
 
 Team members: [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Morluyan Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
 
-**Disclosure:** Documents, code, etc. displayed in this repository includes or references data provided by J.P. Morgan Chase & Co.
+This project is in fulfillment of the [Erdös Institute](https://www.erdosinstitute.org/) Data Science Program for Fall 2025.
+
+**Deliverables**
+- 5-minute video presentation
+- Presentation slides PDF
+- Executive Summary
+
+**Disclosure:** Documents, notebooks, code, visualizations etc. displayed in this repository include or reference data provided by J.P. Morgan Chase & Co.
 
 
 # Contents
@@ -14,6 +21,7 @@ Team members: [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare
 4. [Performance Metrics and KPIs](#Performance%20Metrics%20and%20KPIs)
 5. [Results](#Results)
 6. [Challenges and Future Work](#Challenges%20and%20Future%20Work)
+7. [Files](#Files)
 
 
 ## Introduction
@@ -27,6 +35,8 @@ We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https
     <img src="synthetic-payment-data-sample.png" />
 <font size=2> <b> Image source: J.P. Morgan Chase & Co. </b> </font>
 </p>
+
+Unfortunately, we cannot give full access to the Fraud Payment Data due to the Terms of Use agreement with J.P. Morgan Chase & Co.
 
 ## Methods, Models, Features Engineered
 
@@ -76,9 +86,7 @@ Initial results show strong computational performance and low false positive rat
 
 <div align="center">
 
-Table 1: Training Accuracy for Logistic Regression
-
-Training accuracy for Logistic Regression (with cutoff 0.1) is 0.956 
+Table 1: Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956 
 
 | | Precision | Recall | F1-Score |
 |:-----------:|:-----------:|:-----------:|:-----------:|
@@ -86,9 +94,7 @@ Training accuracy for Logistic Regression (with cutoff 0.1) is 0.956
 | 1 (Fraud) | 0.13 | 0.26 | 0.17
 
 
-Table 2: Training accuracy for XGBoost
-		
-Training accuracy for XGBoost is 0.979 
+Table 2: Training accuracy for XGBoost is 0.979 
 
 | | Precision | Recall | F1-Score |
 |:-----------:|:-----------:|:-----------:|:-----------:|
@@ -110,7 +116,7 @@ For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift o
 
 <div align="center">
 
-Table 4: Business KPIs
+Table 3: Business KPIs
 
 | Metric | Result | Interpretation |
 |:-----------:|:-----------:|:-----------:|
@@ -140,5 +146,11 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
     <img src="Fraud_number_vs_transaction_types.png" width=500 />
 </p>
 
+## Files
 
-This project is in fulfillment of the [Erdös Institute](https://www.erdosinstitute.org/) Data Science Program for Fall 2025.
+### Notebooks
+
+- `Visual-whatever.ipynb`: visual stuff
+- `Model.ipynb`: modelling
+- 
+

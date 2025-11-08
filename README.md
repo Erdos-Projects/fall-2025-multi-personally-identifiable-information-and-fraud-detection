@@ -58,17 +58,15 @@ To analyze the complex network of over 300,000 customer and merchant accounts, w
 Logistic Regression, XGBoost, Linear Discrimination Analysis, PCA
 
 
-## Performance Metrics and KPIs
-
-
-### Key Performance Metric
-
-
+## Key Performance Indicators
 
 ### Model Performance KPI
 
-Our Key Performance Indicators include the percentage of fraud transactions correctly flagged (Recall),  and a measure of how much better the model is at identifying fraud compared to random guessing (Lift).
-Figure 4 shows the trade-off between recall and lift for our XGBoost model across different thresholds. The optimal threshold is 0.5, where the model achieves 70% recall, balancing detection coverage and precision. 
+Our Key Performance Indicators include the percentage of fraud transactions correctly flagged (Recall),  and a measure of how much better the model is at identifying fraud compared to random guessing (Lift). We examined the trade-offs between recall and lift for our XGBoost model across different thresholds. The optimal threshold is 0.5, where the model achieves 70% recall, balancing detection coverage and precision.
+
+<p align="center">
+<img src="" width=450 />
+</p>
 
 ### Business KPI
 
@@ -79,44 +77,9 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 - However, it currently has a high fraud miss rate (~66%), requiring threshold tuning for recall-first performance.
 - With adjustments, we anticipate achieving high recall, aligning with bank fraud pre-screening strategies.
 
-
-## Results
-
-Initial results show strong computational performance and low false positive rate, demonstrating feasibility for real time screening. At the current decision threshold fraud detection remains limited, resulting in a high miss rate. Future iterations will adjust model tuning, and thresholding to increase recall, the primary objective of the model, while maintaining manageable volume alert. This stage validates the model architecture and provides a foundation for a high-recall optimization in subsequent experiments.
-
 <div align="center">
 
-Table 1: Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956 
-
-| | Precision | Recall | F1-Score |
-|:-----------:|:-----------:|:-----------:|:-----------:|
-| 0 (Non-Fraud) | 0.98 | 0.97 | 0.98 |
-| 1 (Fraud) | 0.13 | 0.26 | 0.17
-
-
-Table 2: Training accuracy for XGBoost is 0.979 
-
-| | Precision | Recall | F1-Score |
-|:-----------:|:-----------:|:-----------:|:-----------:|
-| 0 (Non-Fraud) | 0.99 | 0.98 | 0.98 |
-| 1 (Fraud) | 0.24 | 0.29 | 0.26 |
-
-</div>
-
-
-
-These results don't reflect our model's preprocessing effectiveness. We suggest using 'Lift,' a standard data science metric, instead,
-
-$$\text{\large Lift} = \dfrac{ \dfrac{\text{TP}}{\text{TP} + \text{FN}}}{\dfrac{\text{FP} + \text{TP}}{\text{FP} + \text{TP} + \text{TN} + \text{FN}}}$$
-
-This metric, similar to recall but with Predicted Positive Rate (PPR) in the denominator, measures efficiency. It prioritizes high fraud detection (recall) and a low PPR, aiming to minimize missed fraud and human agent workload by forwarding essential cases.
-
-Any randomized model has Lift=1, and Figure 4  shows how our models have the flexibility to trade Recall for Lift:
-For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift of the baseline. This significantly boosts fraud detection efficiency and dramatically cuts operational costs.
-
-<div align="center">
-
-Table 3: Business KPIs
+Table 1: Business KPIs
 
 | Metric | Result | Interpretation |
 |:-----------:|:-----------:|:-----------:|
@@ -131,7 +94,49 @@ Table 3: Business KPIs
 
 *Note: Synthetic values approximate business value since the data set is synthetic. A back of envelope calculation assumes an analyst makes $50 (salary+benefits) it costs approximately $10 at 4 minutes per alert.* 
 
-## Challenges and Future Work
+
+
+## Results
+
+Initial results show strong computational performance and low false positive rate, demonstrating feasibility for real time screening. At the current decision threshold (0.5) fraud detection remains limited, resulting in a high miss rate. Future iterations will adjust model tuning, and thresholding to increase recall, the primary objective of the model, while maintaining manageable volume alert. This stage validates the model architecture and provides a foundation for a high-recall optimization in subsequent experiments.
+
+<div align="center">
+
+Table 2: Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956 
+
+| | Precision | Recall | F1-Score |
+|:-----------:|:-----------:|:-----------:|:-----------:|
+| 0 (Non-Fraud) | 0.98 | 0.97 | 0.98 |
+| 1 (Fraud) | 0.13 | 0.26 | 0.17
+
+
+Table 3: Training accuracy for XGBoost is 0.979 
+
+| | Precision | Recall | F1-Score |
+|:-----------:|:-----------:|:-----------:|:-----------:|
+| 0 (Non-Fraud) | 0.99 | 0.98 | 0.98 |
+| 1 (Fraud) | 0.24 | 0.29 | 0.26 |
+
+</div>
+
+These results don't reflect our model's preprocessing effectiveness. We suggest using 'Lift,' a standard data science metric, instead,
+
+$$\text{\large Lift} = \dfrac{ \dfrac{\text{TP}}{\text{TP} + \text{FN}}}{\dfrac{\text{FP} + \text{TP}}{\text{FP} + \text{TP} + \text{TN} + \text{FN}}}$$
+
+This metric, similar to recall but with Predicted Positive Rate (PPR) in the denominator, measures efficiency. It prioritizes high fraud detection (recall) and a low PPR, aiming to minimize missed fraud and human agent workload by forwarding essential cases.
+
+Any randomized model has Lift = 1, and Figure 4  shows how our models have the flexibility to trade Recall for Lift:
+For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift of the baseline. This significantly boosts fraud detection efficiency and dramatically cuts operational costs.
+
+**Figure 4**
+<p align="center">
+<img src="readme_pics/regressions.png" width=450 />
+</p>
+
+<div align="center">
+
+
+## Challenges
 
 Developing a fraud detection model using the J.P. Morgan dataset presents three main challenges:
 
@@ -140,6 +145,8 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 2. **Imbalanced Data:** Fraudulent transactions (2.06% of 1.49 million+) are significantly outnumbered by non-fraudulent ones, making it difficult for a model to learn (Figures ??).
 
 3. **Synthetic Data Artifact:** Transaction timestamps in this synthetic dataset may follow a pattern, potentially lacking predictive information about fraud, as fraudulent labels were assigned using predefined probabilities.
+
+4. **Normal metrics like accuracy and PR-AUC do not reflect the performance** of our filter well. Instead we use 'Lift,' a standard data science metric that measures efficiency and is defined as follows:
 
 <p align="center">
 <img src="readme_pics/fraud_and_non-fraud_vs_transaction_types.png" width=450 />

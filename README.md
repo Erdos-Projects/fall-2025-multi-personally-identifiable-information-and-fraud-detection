@@ -94,9 +94,9 @@ Training accuracy for XGBoost is 0.979
 
 
 
-These results don't reflect our model's preprocessing effectiveness. We suggest using 'Lift,' a standard data science metric, instead.
+These results don't reflect our model's preprocessing effectiveness. We suggest using 'Lift,' a standard data science metric, instead,
 
-$$\text{Lift} = \dfrac{ \cfrac{\text{TP}}{\text{TP} + \text{FN}}}{\cfrac{\text{FP} + \text{TP}}{\text{FP} + \text{TP} + \text{TN} + \text{FN}}}$$
+$$\text{Lift} = \dfrac{ \dfrac{\text{TP}}{\text{TP} + \text{FN}}}{\dfrac{\text{FP} + \text{TP}}{\text{FP} + \text{TP} + \text{TN} + \text{FN}}}$$
 
 This metric, similar to recall but with Predicted Positive Rate (PPR) in the denominator, measures efficiency. It prioritizes high fraud detection (recall) and a low PPR, aiming to minimize missed fraud and human agent workload by forwarding essential cases.
 

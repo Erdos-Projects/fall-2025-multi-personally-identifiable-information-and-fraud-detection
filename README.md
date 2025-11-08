@@ -126,7 +126,7 @@ For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift o
 <p align="center">
 <b>Figure 3:</b> Lift vs. Recall</p>
 <p align="center">
-<img src="visualization_files/regressions.png" width=500 />
+<img src="visualization_files/regressions_lift_vs_recall.png" width=500 />
 </p>
 
 
@@ -145,14 +145,20 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 <p align="center">
 <b> Figures 4,5:</b> Number of fraudulent transaction types vs. all transactions
 <img src="visualization_files/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
-<img src="visualization_files/Fraud_number_vs_transaction_types.png" width=400 />
+<img src="visualization_files/fraud_number_vs_transaction_types.png" width=400 />
 </p>
 
 ## Files
 
 ### Notebooks
 
-- `Visual-whatever.ipynb`: visual stuff
 - `Model.ipynb`: modelling
-- 
 
+### Visualizations
+
+- [`synthetic-payment-data-sample.png`](synthetic-payment-data-sample.png): sample image of J.P. Morgan Fraud Data
+- [`network_example.png`](network_example.png): example of small network of nodes/accounts
+- [`network_example_w_fraud_ring.png`](network_example_w_fraud_ring.png): example of small network of nodes/accounts with fraudulent actors
+- [`regressions_lift_vs_recall.png`](regressions_lift_vs_recall.png): lift vs. recall plot
+- [`fraud_and_non-fraud_vs_transaction_types.png`](fraud_and_non-fraud_vs_transaction_types.png): bar graph of number of fraudulent and non-fraudulent transactions per type
+- [`fraud_number_vs_transaction_types.png`](fraud_number_vs_transaction_types.png): bar graph of just fraudulent transactions per type

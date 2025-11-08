@@ -47,7 +47,7 @@ We engineer both transaction and graph-derived features to train a lightweight, 
 To analyze the complex network of over 300,000 customer and merchant accounts, we used Python’s NetworkX package to construct a multi-directed graph. A multi-directed graph is a network structure composed of nodes, representing sender or beneficiary accounts, and the edges represent transactions. Edge direction shows fund flow – who is sending versus who is receiving the funds – and multiple edges indicate repeated transfers. Fraud often occurs in clusters of accounts cycling funds among themselves, making the graph view effective for uncovering hidden connections and identifying potential fraud rings.
 
 <p align="center">
-**Figures 1,2:** Multi-directed graph network</p>
+<b>Figures 1,2:</b> Multi-directed graph network</p>
 <p align="center">
 <img src="readme_pics/network_example.png" width=400 />
 <img src="readme_pics/network_example_w_fraud_ring.png" width=400 />
@@ -96,8 +96,7 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 Initial results show strong computational performance and low false positive rate, demonstrating feasibility for real time screening. At the current decision threshold (0.5) fraud detection remains limited, resulting in a high miss rate. Future iterations will adjust model tuning, and thresholding to increase recall, the primary objective of the model, while maintaining manageable volume alert. This stage validates the model architecture and provides a foundation for a high-recall optimization in subsequent experiments.
 
 <div align="center">
-<font size=2> <b>Table 2:</b> Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956 </font>
-
+**Table 2:** Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956
 
 | | Precision | Recall | F1-Score |
 |:-----------:|:-----------:|:-----------:|:-----------:|
@@ -105,7 +104,7 @@ Initial results show strong computational performance and low false positive rat
 | 1 (Fraud) | 0.13 | 0.26 | 0.17 |
 
 
-<font size=2> **Table 3:** Training accuracy for XGBoost is 0.979 </font>
+**Table 3:** Training accuracy for XGBoost is 0.979
 
 | | Precision | Recall | F1-Score |
 |:-----------:|:-----------:|:-----------:|:-----------:|
@@ -126,8 +125,8 @@ For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift o
 
 
 <p align="center">
-<font size=2> <b> Figure 3:</b> Lift vs. Recall </font>
-<img src="readme_pics/regressions.png" width=450 />
+<b> Figure 3:</b> Lift vs. Recall
+<img src="readme_pics/regressions.png" width=500 />
 </p>
 
 
@@ -144,7 +143,7 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 4. **Normal metrics like accuracy and PR-AUC do not reflect the performance** of our filter well. Instead we use 'Lift,' a standard data science metric that measures efficiency and is defined as follows:
 
 <p align="center">
-<font size=2> <b> Figures 4,5:</b> Number of fraudulent transaction types vs. all transactions </font>
+<b> Figures 4,5:</b> Number of fraudulent transaction types vs. all transactions
 <img src="readme_pics/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
 <img src="readme_pics/Fraud_number_vs_transaction_types.png" width=400 />
 </p>

@@ -75,7 +75,7 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 - With adjustments, we anticipate achieving high recall, aligning with bank fraud pre-screening strategies.
 
 <div align="center">
-**Table 1:** Business KPIs
+<b>Table 1:</b> Business KPIs
 
 | Metric | Result | Interpretation |
 |:-----------:|:-----------:|:-----------:|
@@ -96,7 +96,7 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 Initial results show strong computational performance and low false positive rate, demonstrating feasibility for real time screening. At the current decision threshold (0.5) fraud detection remains limited, resulting in a high miss rate. Future iterations will adjust model tuning, and thresholding to increase recall, the primary objective of the model, while maintaining manageable volume alert. This stage validates the model architecture and provides a foundation for a high-recall optimization in subsequent experiments.
 
 <div align="center">
-**Table 2:** Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956
+<b>Table 2:</b> Training Accuracy for Logistic Regression (with cutoff 0.1) is 0.956
 
 | | Precision | Recall | F1-Score |
 |:-----------:|:-----------:|:-----------:|:-----------:|
@@ -104,7 +104,7 @@ Initial results show strong computational performance and low false positive rat
 | 1 (Fraud) | 0.13 | 0.26 | 0.17 |
 
 
-**Table 3:** Training accuracy for XGBoost is 0.979
+<b>Table 3:</b> Training accuracy for XGBoost is 0.979
 
 | | Precision | Recall | F1-Score |
 |:-----------:|:-----------:|:-----------:|:-----------:|
@@ -126,6 +126,8 @@ For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift o
 
 <p align="center">
 <b> Figure 3:</b> Lift vs. Recall
+</p>
+<p align="center">
 <img src="readme_pics/regressions.png" width=500 />
 </p>
 

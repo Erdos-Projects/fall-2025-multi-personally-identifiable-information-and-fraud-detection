@@ -5,7 +5,7 @@ This repository is for the Fast Fraud Screening project as part of the fulfillme
 **Team members:** [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Morluyan Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
 
 
-**Deliverables**
+**Presentation Deliverables**
 - [5-minute video presentation](presentation/Presentation.mp4)
 - [Presentation slides PDF](presentation/Fraud_Detection_Erdos_FL25-Google_Slides.pdf)
 - [Executive Summary](presentation/Executive_Summary-Fast_Fraud_Screening.pdf)

@@ -131,6 +131,6 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 3. **Synthetic Data Artifact:** Transaction timestamps in this synthetic dataset may follow a pattern, potentially lacking predictive information about fraud, as fraudulent labels were assigned using predefined probabilities.
 
 <p align="center">
-    <img src="fraud_and_non-fraud_vs_transaction_types.png" width=200 />
-    <img src="Fraud_number_vs_transaction_types.png" width=200 />
+    <img src="fraud_and_non-fraud_vs_transaction_types.png" width=500 />
+    <img src="Fraud_number_vs_transaction_types.png" width=500 />
 </p>

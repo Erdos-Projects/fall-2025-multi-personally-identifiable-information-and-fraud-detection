@@ -32,7 +32,7 @@ Financial fraud is a growing challenge. This project proposes a two-stage fraud 
 We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https://www.jpmorganchase.com/about/technology/research/ai/synthetic-data), a synthetic dataset generated due to privacy concerns. This subject-centric data contains over 1.49 million transactions (electronic transfers, bill payments, deposits, withdrawals) spanning approximately 50 years. Each entry details the transaction amount in U.S. dollars, involved accounts (sender, beneficiary, or both), and other identifying features.
 
 <p align="center">
-    <img src="readme_pics/synthetic-payment-data-sample.png" />
+<img src="readme_pics/synthetic-payment-data-sample.png" />
 <font size=2> <b> Image source: J.P. Morgan Chase & Co. </b> </font>
 </p>
 
@@ -48,6 +48,8 @@ To analyze the complex network of over 300,000 customer and merchant accounts, w
 
 <p align="center">
 <font size=2> <b>Figures 1,2:</b> Multi-directed graph network </font>
+</p>
+<p align="center">
 <img src="readme_pics/network_example.png" width=400 />
 <img src="readme_pics/network_example_w_fraud_ring.png" width=400 />
 </p>

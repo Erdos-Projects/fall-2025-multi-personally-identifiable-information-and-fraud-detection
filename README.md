@@ -152,6 +152,7 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 
 ### Notebooks
 
+- [`requirements.txt`](requirements.txt): Python package requirements to run Jupyter notebooks
 - `Model.ipynb`: modelling
 
 ### Visualizations

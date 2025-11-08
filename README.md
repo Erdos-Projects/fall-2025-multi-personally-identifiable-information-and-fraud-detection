@@ -1,4 +1,4 @@
-# <font size=5> **Fast Fraud Screening** </font> <br> <font size=3> _Using Lightweight Models to Flag Risk Before Deep Analysis_ </font>
+# <font size=5> **Fast Fraud Screening:** _Using Lightweight Models to Flag Risk Before Deep Analysis_ </font>
 
 Team members: [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
 
@@ -10,18 +10,21 @@ Team members: [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare
 1. [Introduction](#Introduction)
 2. [Dataset](#Dataset)
 3. [Methods, Models, Engineered Features
-](#Methods, Models, Engineered Features)
-4. [Performance Metrics and KPIs](#Performance Metrics and KPIs)
+](#Methods,%20Models,%20Engineered%20Features)
+4. [Performance Metrics and KPIs](#Performance%20Metrics%20and%20KPIs)
 5. [Results](#Results)
-6. [Challenges and Future Work](#Challenges and Future Work)
+6. [Challenges and Future Work](#Challenges%20and%20Future%20Work)
 
 
 ## Introduction
-Financial fraud is a growing challenge. This project proposes a two-stage fraud detection framework: a lightweight "surrogate model" screens transactions, prioritizing high recall, then flagged transactions go to intensive models/human analysts for verification. This reduces computational load, speeds detection, and focuses resources. Using J.P. Morgan & Co's synthetic data, our XGBoost model achieved 7x Lift and 70% recall, flagging 1 in 4 fraud cases while incorrectly flagging less than 1% of legitimate transactions. We propose a "Lift" metric (recall and predicted positive rates) for efficiency, finding traditional metrics misleading.
+Financial fraud is a growing challenge. This project proposes a two-stage fraud detection framework: a lightweight "surrogate model" screens transactions, prioritizing high recall, then flagged transactions go to intensive models/human analysts for verification. This reduces computational load, speeds detection, and focuses resources. Using J.P. Morgan Chase & Co's synthetic data, our XGBoost model achieved 7x Lift and 70% recall, flagging 1 in 4 fraud cases while incorrectly flagging less than 1% of legitimate transactions. We propose a "Lift" metric (recall and predicted positive rates) for efficiency, finding traditional metrics misleading.
 
 ## Dataset
 
 We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https://www.jpmorganchase.com/about/technology/research/ai/synthetic-data), a synthetic dataset for privacy. This subject-centric data contains over 1.49 million transactions (electronic transfers, bill payments, deposits, withdrawals) spanning approximately 50 years. Each entry details the transaction amount in U.S. dollars, involved accounts (sender, beneficiary, or both), and other identifying features.
+
+![alt text](synthetic-payment-data-sample.png)
+<font size=2> Image source: J.P. Morgan Chase & Co. </font>
 
 ## Methods, Models, Features Engineered
 
@@ -29,12 +32,13 @@ We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https
 
 We engineer both transaction and graph-derived features to train a lightweight, high-recall fraud screening model.
 
-To analyze the complex network of over 300,000 customer and merchant accounts, we used Python’s NetworkX package to construct a multi-directed graph. A multi-directed graph is a network structure composed of nodes, representing sender or beneficiary accounts, and the edges represent transactions. Edge direction shows fund flow – who is sending versus who is receiving the funds – and multiple edges indicate repeated transfers. Fraud often occurs in clusters of accounts cycling funds among themselves, making the graph view effective for uncovering hidden connections and identifying potential fraud rings (Figure #).
+To analyze the complex network of over 300,000 customer and merchant accounts, we used Python’s NetworkX package to construct a multi-directed graph. A multi-directed graph is a network structure composed of nodes, representing sender or beneficiary accounts, and the edges represent transactions. Edge direction shows fund flow – who is sending versus who is receiving the funds – and multiple edges indicate repeated transfers. Fraud often occurs in clusters of accounts cycling funds among themselves, making the graph view effective for uncovering hidden connections and identifying potential fraud rings (Figure ??).
 
 ### Features Engineered
 
-_Models and Tools Used:_ Logistic Regression, XGBoost, Linear Discrimination Analysis, PCA
+### Models and Tools Used
 
+Logistic Regression, XGBoost, Linear Discrimination Analysis, PCA
 
 
 ## Performance Metrics and KPIs
@@ -69,6 +73,8 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 
 1. **Feature Engineering:** New features must be generated from raw transaction data to uncover fraudulent patterns.
 
-2. **Imbalanced Data:** Fraudulent transactions (2.06% of 1.49 million+) are significantly outnumbered by non-fraudulent ones, making it difficult for a model to learn.
+2. **Imbalanced Data:** Fraudulent transactions (2.06% of 1.49 million+) are significantly outnumbered by non-fraudulent ones, making it difficult for a model to learn (Figure ??).
 
 3. **Synthetic Data Artifact:** Transaction timestamps in this synthetic dataset may follow a pattern, potentially lacking predictive information about fraud, as fraudulent labels were assigned using predefined probabilities.
+
+![Text?](fraud_and_non-fraud_vs_transaction_types.png)

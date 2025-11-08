@@ -8,20 +8,20 @@ This repository is for the Fast Fraud Screening project as part of the fulfillme
 **Deliverables**
 - [5-minute video presentation](presentation/Presentation.mp4)
 - [Presentation slides PDF](presentation/Fraud_Detection_Erdos_FL25-Google_Slides.pdf)
-- Executive Summary
+- [Executive Summary](presentation/Executive_Summary-Fast_Fraud_Screening.pdf)
 
 **Disclosure:** Documents, notebooks, code, visualizations etc. displayed in this repository include or reference data provided by J.P. Morgan Chase & Co.
 
 
 # Contents
 
-1. [Introduction](#Introduction)
-2. [Dataset](#Dataset)
+1. [Introduction](#introduction)
+2. [Dataset](#dataset)
 3. [Methods and Models](#methods-and-models)
 4. [Key Performance Indicators](#key-performance-indicators)
-5. [Results](#Results)
-6. [Challenges](#Challenges)
-7. [Files](#Files)
+5. [Results](#results)
+6. [Challenges](#challenges)
+7. [Files](#files)
 
 
 ## Introduction

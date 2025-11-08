@@ -157,8 +157,8 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 ### Visualizations
 
 - [`synthetic-payment-data-sample.png`](visualization_files/synthetic-payment-data-sample.png): sample image of J.P. Morgan Fraud Data
-- [`network_example.png`](visualization_files/network_example.png): example of small network of nodes/accounts
-- [`network_example_w_fraud_ring.png`](visualization_files/network_example_w_fraud_ring.png): example of small network of nodes/accounts with fraudulent actors
+- [`network_example.png`](visualization_files/network_example.png): example of a small subset of the graph network
+- [`network_example_w_fraud_ring.png`](visualization_files/network_example_w_fraud_ring.png): example of a small subset of the graph network featuring nodes/accounts with fraudulent actors
 - [`regressions_lift_vs_recall.png`](visualization_files/regressions_lift_vs_recall.png): lift vs. recall plot
 - [`fraud_and_non-fraud_vs_transaction_types.png`](visualization_files/fraud_and_non-fraud_vs_transaction_types.png): bar graph of number of fraudulent and non-fraudulent transactions per type
 - [`fraud_number_vs_transaction_types.png`](visualization_files/fraud_number_vs_transaction_types.png): bar graph of just fraudulent transactions per type

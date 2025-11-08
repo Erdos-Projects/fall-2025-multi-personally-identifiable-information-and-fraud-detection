@@ -5,8 +5,8 @@
 This project is in fulfillment of the [Erdös Institute](https://www.erdosinstitute.org/) Data Science Program for Fall 2025.
 
 **Deliverables**
-- 5-minute video presentation
-- Presentation slides PDF
+- [5-minute video presentation](Presentation.mp4)
+- [Presentation slides PDF](Fraud Detection_Erdos_FL25 - Google Slides.pdf)
 - Executive Summary
 
 **Disclosure:** Documents, notebooks, code, visualizations etc. displayed in this repository include or reference data provided by J.P. Morgan Chase & Co.

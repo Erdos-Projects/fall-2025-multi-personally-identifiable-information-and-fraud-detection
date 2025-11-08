@@ -69,7 +69,7 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 
 Initial results show strong computational performance and low false positive rate, demonstrating feasibility for real time screening. At the current decision threshold fraud detection remains limited, resulting in a high miss rate. Future iterations will adjust model tuning, and thresholding to increase recall, the primary objective of the model, while maintaining manageable volume alert. This stage validates the model architecture and provides a foundation for a high-recall optimization in subsequent experiments.
 
-<center>
+<div align="center">
 
 Table 1: Training Accuracy for Logistic Regression
 
@@ -90,7 +90,7 @@ Training accuracy for XGBoost is 0.979
 | 0 (Non-Fraud) | 0.99 | 0.98 | 0.98 |
 | 1 (Fraud) | 0.24 | 0.29 | 0.26 |
 
-</center>
+</div>
 
 
 
@@ -103,7 +103,7 @@ This metric, similar to recall but with Predicted Positive Rate (PPR) in the den
 Any randomized model has Lift=1, and Figure 4  shows how our models have the flexibility to trade Recall for Lift:
 For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift of the baseline. This significantly boosts fraud detection efficiency and dramatically cuts operational costs.
 
-<center>
+<div align="center">
 
 Table 4: Business KPIs
 
@@ -116,7 +116,7 @@ Table 4: Business KPIs
 | Total Review Cost | $20,960 | Cost of analyst reviewing alerts |
 | Missed Fraud Risk | $1,916,768 | Proxy dollars lost from missed fraud |
 
-</center>
+</div>
 
 *Note: Synthetic values approximate business value since the data set is synthetic. A back of envelope calculation assumes an analyst makes $50 (salary+benefits) it costs approximately $10 at 4 minutes per alert.* 
 

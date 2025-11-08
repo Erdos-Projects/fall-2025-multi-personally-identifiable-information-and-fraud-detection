@@ -32,7 +32,7 @@ Financial fraud is a growing challenge. This project proposes a two-stage fraud 
 We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https://www.jpmorganchase.com/about/technology/research/ai/synthetic-data), a synthetic dataset generated due to privacy concerns. This subject-centric data contains over 1.49 million transactions (electronic transfers, bill payments, deposits, withdrawals) spanning approximately 50 years. Each entry details the transaction amount in U.S. dollars, involved accounts (sender, beneficiary, or both), and other identifying features.
 
 <p align="center">
-<img src="readme_pics/synthetic-payment-data-sample.png" />
+<img src="visualization_files/synthetic-payment-data-sample.png" />
 <font size=2> <b> Image source: J.P. Morgan Chase & Co. </b> </font>
 </p>
 
@@ -49,8 +49,8 @@ To analyze the complex network of over 300,000 customer and merchant accounts, w
 <p align="center">
 <b>Figures 1,2:</b> Multi-directed graph network</p>
 <p align="center">
-<img src="readme_pics/network_example.png" width=400 />
-<img src="readme_pics/network_example_w_fraud_ring.png" width=400 />
+<img src="visualization_files/network_example.png" width=400 />
+<img src="visualization_files/network_example_w_fraud_ring.png" width=400 />
 </p>
 
 
@@ -126,7 +126,7 @@ For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift o
 <p align="center">
 <b>Figure 3:</b> Lift vs. Recall</p>
 <p align="center">
-<img src="readme_pics/regressions.png" width=500 />
+<img src="visualization_files/regressions.png" width=500 />
 </p>
 
 
@@ -144,8 +144,8 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 
 <p align="center">
 <b> Figures 4,5:</b> Number of fraudulent transaction types vs. all transactions
-<img src="readme_pics/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
-<img src="readme_pics/Fraud_number_vs_transaction_types.png" width=400 />
+<img src="visualization_files/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
+<img src="visualization_files/Fraud_number_vs_transaction_types.png" width=400 />
 </p>
 
 ## Files

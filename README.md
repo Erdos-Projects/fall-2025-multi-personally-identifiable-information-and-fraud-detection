@@ -1,6 +1,6 @@
 # <font size=6> **Fast Fraud Screening:** _Using Lightweight Models to Flag Risk Before Deep Analysis_ </font>
 
-Team members: [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Morluyan Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
+**Team members:** [Abdullah Ahmed](https://github.com/abdullah5523p), [Noimot Bakare Ayoub](https://github.com/unomics20), [Cyril Morluyan Cordor](https://github.com/cyril-cordor), [Brandon Owens](https://github.com/Brandon-Owens)
 
 This project is in fulfillment of the [Erdös Institute](https://www.erdosinstitute.org/) Data Science Program for Fall 2025.
 
@@ -16,11 +16,10 @@ This project is in fulfillment of the [Erdös Institute](https://www.erdosinstitu
 
 1. [Introduction](#Introduction)
 2. [Dataset](#Dataset)
-3. [Methods, Models, Engineered Features
-](#Methods%20and%20Models)
+3. [Methods and Models](#Methods%20and%20Models)
 4. [Key Performance Indicators](#Key%20Performance%20Indicators)
 5. [Results](#Results)
-6. [Challenges and Future Work](#Challenges%20and%20Future%20Work)
+6. [Challenges](#Challenges)
 7. [Files](#Files)
 
 
@@ -111,12 +110,11 @@ Initial results show strong computational performance and low false positive rat
 | 0 (Non-Fraud) | 0.99 | 0.98 | 0.98 |
 | 1 (Fraud) | 0.24 | 0.29 | 0.26 |
 
-
 </div>
 
 These results don't reflect our model's preprocessing effectiveness. We suggest using 'Lift,' a standard data science metric, instead,
 
-$$\Large \text{Lift} = \dfrac{ \dfrac{\text{TP}}{\text{TP} + \text{FN}}}{\dfrac{\text{FP} + \text{TP}}{\text{FP} + \text{TP} + \text{TN} + \text{FN}}}$$
+$$\large \text{Lift} = \dfrac{ \dfrac{\text{TP}}{\text{TP} + \text{FN}}}{\dfrac{\text{FP} + \text{TP}}{\text{FP} + \text{TP} + \text{TN} + \text{FN}}}$$
 
 This metric, similar to recall but with Predicted Positive Rate (PPR) in the denominator, measures efficiency. It prioritizes high fraud detection (recall) and a low PPR, aiming to minimize missed fraud and human agent workload by forwarding essential cases.
 
@@ -125,7 +123,7 @@ For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift o
 
 
 <p align="center">
-<b> Figure 3:</b> Lift vs. Recall</p>
+<b>Figure 3:</b> Lift vs. Recall</p>
 <p align="center">
 <img src="readme_pics/regressions.png" width=500 />
 </p>

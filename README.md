@@ -23,8 +23,10 @@ Financial fraud is a growing challenge. This project proposes a two-stage fraud 
 
 We utilize the [J.P. Morgan Chase & Co. Payment Data for Fraud Protection](https://www.jpmorganchase.com/about/technology/research/ai/synthetic-data), a synthetic dataset for privacy. This subject-centric data contains over 1.49 million transactions (electronic transfers, bill payments, deposits, withdrawals) spanning approximately 50 years. Each entry details the transaction amount in U.S. dollars, involved accounts (sender, beneficiary, or both), and other identifying features.
 
-![alt text](synthetic-payment-data-sample.png)
-<font size=2> Image source: J.P. Morgan Chase & Co. </font>
+<p align="center">
+    <img src="synthetic-payment-data-sample.png" />
+<font size=2> **Image source: J.P. Morgan Chase & Co.** </font>
+</p>
 
 ## Methods, Models, Features Engineered
 
@@ -67,14 +69,70 @@ We use synthetic data to create realistic fraud risk KPIs, evaluating the model 
 
 Initial results show strong computational performance and low false positive rate, demonstrating feasibility for real time screening. At the current decision threshold fraud detection remains limited, resulting in a high miss rate. Future iterations will adjust model tuning, and thresholding to increase recall, the primary objective of the model, while maintaining manageable volume alert. This stage validates the model architecture and provides a foundation for a high-recall optimization in subsequent experiments.
 
+<center>
+
+Table 1: Training Accuracy for Logistic Regression
+
+Training accuracy for Logistic Regression (with cutoff 0.1) is 0.956 
+
+| | Precision | Recall | F1-Score |
+|:-----------:|:-----------:|:-----------:|:-----------:|
+| 0 (Non-Fraud) | 0.98 | 0.97 | 0.98 |
+| 1 (Fraud) | 0.13 | 0.26 | 0.17
+
+
+Table 2: Training accuracy for XGBoost
+		
+Training accuracy for XGBoost is 0.979 
+
+| | Precision | Recall | F1-Score |
+|:-----------:|:-----------:|:-----------:|:-----------:|
+| 0 (Non-Fraud) | 0.99 | 0.98 | 0.98 |
+| 1 (Fraud) | 0.24 | 0.29 | 0.26 |
+
+</center>
+
+
+
+These results don't reflect our model's preprocessing effectiveness. We suggest using 'Lift,' a standard data science metric, instead.
+
+$$\text{Lift} = \dfrac{ \cfrac{\text{TP}}{\text{TP} + \text{FN}}}{\cfrac{\text{FP} + \text{TP}}{\text{FP} + \text{TP} + \text{TN} + \text{FN}}}$$
+
+This metric, similar to recall but with Predicted Positive Rate (PPR) in the denominator, measures efficiency. It prioritizes high fraud detection (recall) and a low PPR, aiming to minimize missed fraud and human agent workload by forwarding essential cases.
+
+Any randomized model has Lift=1, and Figure 4  shows how our models have the flexibility to trade Recall for Lift:
+For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift of the baseline. This significantly boosts fraud detection efficiency and dramatically cuts operational costs.
+
+<center>
+
+Table 4: Business KPIs
+
+| Metric | Result | Interpretation |
+|:-----------:|:-----------:|:-----------:|
+| Fraud Detection Recall | 24% | % of fraud successfully flagged |
+| False Negative Rate | 76% | % of fraud missed |
+| False Positive Rate | >1% | % of legitimate transactions flagged |
+| Synthetic Loss Avoided | $2,357,370 | Proxy dollars saved by catching fraud |
+| Total Review Cost | $20,960 | Cost of analyst reviewing alerts |
+| Missed Fraud Risk | $1,916,768 | Proxy dollars lost from missed fraud |
+
+</center>
+
+*Note: Synthetic values approximate business value since the data set is synthetic. A back of envelope calculation assumes an analyst makes $50 (salary+benefits) it costs approximately $10 at 4 minutes per alert.* 
+
 ## Challenges and Future Work
 
 Developing a fraud detection model using the J.P. Morgan dataset presents three main challenges:
 
 1. **Feature Engineering:** New features must be generated from raw transaction data to uncover fraudulent patterns.
 
-2. **Imbalanced Data:** Fraudulent transactions (2.06% of 1.49 million+) are significantly outnumbered by non-fraudulent ones, making it difficult for a model to learn (Figure ??).
+2. **Imbalanced Data:** Fraudulent transactions (2.06% of 1.49 million+) are significantly outnumbered by non-fraudulent ones, making it difficult for a model to learn (Figures ??).
 
 3. **Synthetic Data Artifact:** Transaction timestamps in this synthetic dataset may follow a pattern, potentially lacking predictive information about fraud, as fraudulent labels were assigned using predefined probabilities.
 
-![Text?](fraud_and_non-fraud_vs_transaction_types.png)
+<p align="center">
+    <img src="fraud_and_non-fraud_vs_transaction_types.png" /></p>
+
+<p align="center">
+	<img src="Fraud_number_vs_transaction_types.png" />
+</p>

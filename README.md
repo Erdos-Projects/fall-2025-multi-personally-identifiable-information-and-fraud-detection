@@ -49,6 +49,7 @@ To analyze the complex network of over 300,000 customer and merchant accounts, w
 <p align="center">
 	<img src="readme_pics/network_example.png" width=400 />
 	<img src="readme_pics/network_example_w_fraud_ring.png" width=400 />
+<font size=2> **Figures 1,2:** Multi-directed graph network </font>
 </p>
 
 
@@ -120,13 +121,13 @@ $$\text{\large Lift} = \dfrac{ \dfrac{\text{TP}}{\text{TP} + \text{FN}}}{\dfrac{
 
 This metric, similar to recall but with Predicted Positive Rate (PPR) in the denominator, measures efficiency. It prioritizes high fraud detection (recall) and a low PPR, aiming to minimize missed fraud and human agent workload by forwarding essential cases.
 
-Any randomized model has Lift = 1, and Figure 1 shows how our models have the flexibility to trade Recall for Lift:
+Any randomized model has Lift = 1, and Figure 3 shows how our models have the flexibility to trade Recall for Lift:
 For instance, with recall reduced to 70%, our XGBoost model boasts 7x the Lift of the baseline. This significantly boosts fraud detection efficiency and dramatically cuts operational costs.
 
 
 <p align="center">
 <img src="readme_pics/regressions.png" width=450 />
-<font size=2> **Figure 1:** Lift vs. Recall </font>
+<font size=2> **Figure 3:** Lift vs. Recall </font>
 </p>
 
 
@@ -136,7 +137,7 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 
 1. **Feature Engineering:** New features must be generated from raw transaction data to uncover fraudulent patterns.
 
-2. **Imbalanced Data:** Fraudulent transactions (2.06% of 1.49 million+) are significantly outnumbered by non-fraudulent ones, making it difficult for a model to learn (Figures 2, 3).
+2. **Imbalanced Data:** Fraudulent transactions (2.06% of 1.49 million+) are significantly outnumbered by non-fraudulent ones, making it difficult for a model to learn (Figures 4, 5).
 
 3. **Synthetic Data Artifact:** Transaction timestamps in this synthetic dataset may follow a pattern, potentially lacking predictive information about fraud, as fraudulent labels were assigned using predefined probabilities.
 
@@ -145,7 +146,7 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 <p align="center">
 <img src="readme_pics/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
 <img src="readme_pics/Fraud_number_vs_transaction_types.png" width=400 />
-<font size=2> **Figures 2,3**: Number of fraudulent transaction types vs. all transactions
+<font size=2> **Figures 4,5**: Number of fraudulent transaction types vs. all transactions </font>
 </p>
 
 ## Files

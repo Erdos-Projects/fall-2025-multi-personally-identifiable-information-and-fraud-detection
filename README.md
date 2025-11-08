@@ -47,8 +47,8 @@ We engineer both transaction and graph-derived features to train a lightweight, 
 To analyze the complex network of over 300,000 customer and merchant accounts, we used Python’s NetworkX package to construct a multi-directed graph. A multi-directed graph is a network structure composed of nodes, representing sender or beneficiary accounts, and the edges represent transactions. Edge direction shows fund flow – who is sending versus who is receiving the funds – and multiple edges indicate repeated transfers. Fraud often occurs in clusters of accounts cycling funds among themselves, making the graph view effective for uncovering hidden connections and identifying potential fraud rings.
 
 <p align="center">
-	<img src="readme_pics/network_example.png" width=400 />
-	<img src="readme_pics/network_example_w_fraud_ring.png" width=400 />
+	<img src="readme_pics/network_example.png" width=450 />
+	<img src="readme_pics/network_example_w_fraud_ring.png" width=450 />
 </p>
 
 ### Features Engineered
@@ -142,8 +142,8 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 3. **Synthetic Data Artifact:** Transaction timestamps in this synthetic dataset may follow a pattern, potentially lacking predictive information about fraud, as fraudulent labels were assigned using predefined probabilities.
 
 <p align="center">
-<img src="readme_pics/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
-<img src="readme_pics/Fraud_number_vs_transaction_types.png" width=400 />
+<img src="readme_pics/fraud_and_non-fraud_vs_transaction_types.png" width=450 />
+<img src="readme_pics/Fraud_number_vs_transaction_types.png" width=450 />
 </p>
 
 ## Files

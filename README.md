@@ -155,7 +155,8 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 - [`requirements.txt`](requirements.txt): Python package requirements to run Jupyter notebooks
 - [`Fast_Fraud_Screening_Driver_ntbk.py`](notebooks/Fast_Fraud_Screening_Driver_ntbk.py): This script runs Jupyter notebooks for `Fast_Fraud_Screening_Model.ipynb`, `Fast_Fraud_Screening_Business_KPIs.ipynb`, and `Fast_Fraud_Screening_Report_Visualisations.ipynb` programmatically using `nbclient`. Each notebook will execute cell by cell — exactly as if you ran it manually in Jupyter. This notebook will print errors from any notebook however, it will not stop the next notebook from running.
 - [`Model.ipynb`](notebooks/Model.ipynb): Contains the code generating the different models, Logistic Regression, XGBoost, and Random Forest
-- [`Fast_Fraud_Screening_Report_Visualisations.ipynb`](notebooks/Fast_Fraud_Screening_Report_Visualisations.ipynb): Code for generating data visualizations present in the presentation and readme files
+- [`Fast_Fraud_Screening_Report_Visualization.ipynb`](notebooks/Fast_Fraud_Screening_Report_Visualization.ipynb): Code for generating data visualizations present in the presentation and readme files
+- [`Fast_Fraud_Screening_Business_KPIs.ipynb`](notebooks/Fast_Fraud_Screening_Business_KPIs.ipynb): Code generates statistics and plots on Business KPIs
 
 ### Visualizations
 

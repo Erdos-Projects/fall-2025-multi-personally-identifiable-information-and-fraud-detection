@@ -143,9 +143,9 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 4. **Normal metrics like accuracy and PR-AUC do not reflect the performance** of our filter well. Instead we use 'Lift,' a standard data science metric that measures efficiency and is defined as follows:
 
 <p align="center">
+<img src="visualization_files/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
+<img src="visualization_files/fraud_number_vs_transaction_types.png" width=400 />
 <b> Figures 4,5:</b> Number of fraudulent transaction types vs. all transactions
-<img style="float" src="visualization_files/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
-<img style="float" src="visualization_files/fraud_number_vs_transaction_types.png" width=400 />
 </p>
 
 ## Files

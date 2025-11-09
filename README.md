@@ -157,7 +157,7 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 Each notebook will execute cell by cell — exactly as if you ran it manually in Jupyter. This notebook will print errors from any notebook however, it will not
 stop the next notebook from running.
 - [`Model.ipynb`](notebooks/Model.ipynb): Contains the code generating the different models, Logistic Regression, XGBoost, and Random Forest
-- [`Fast_Fraud_Screening_Report_Visualisations.ipynb`](notebooks/Fast_Fraud_Screening_Report_Visualisations.ipynb): Code for generating data visualizations present in the presentation files and readme file
+- [`Fast_Fraud_Screening_Report_Visualisations.ipynb`](notebooks/Fast_Fraud_Screening_Report_Visualisations.ipynb): Code for generating data visualizations present in the presentation and readme files
 
 ### Visualizations
 

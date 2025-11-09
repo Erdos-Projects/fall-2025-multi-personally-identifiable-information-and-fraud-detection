@@ -18,7 +18,7 @@ This repository is for the Fast Fraud Screening project as part of the fulfillme
 1. [Introduction](#introduction)
 2. [Dataset](#dataset)
 3. [Methods and Models](#methods-and-models)
-4. [Key Performance Indicators](#key-performance-indicators)
+4. [Key Performance Indicators](#key-performance-indicators-(kpis))
 5. [Results](#results)
 6. [Challenges](#challenges)
 7. [Files](#files)

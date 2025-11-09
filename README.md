@@ -145,7 +145,8 @@ Developing a fraud detection model using the J.P. Morgan dataset presents three 
 <p align="center">
 <img src="visualization_files/fraud_and_non-fraud_vs_transaction_types.png" width=400 />
 <img src="visualization_files/fraud_number_vs_transaction_types.png" width=400 />
-<b> Figures 4,5:</b> Number of fraudulent transaction types vs. all transactions
+</p>
+<p align="center"> <b> Figures 4,5:</b> Number of fraudulent transaction types vs. all transactions
 </p>
 
 ## Files
